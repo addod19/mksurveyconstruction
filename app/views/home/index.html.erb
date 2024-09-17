@@ -1,0 +1,46 @@
+<div>
+    <h1 class="header">Welcome to MK Surveying and Construction</h1>
+    <div class="row container-content">
+        <div class="col s12 l4 xl4 left-side">
+            <h2 class="office">We Undertake:</h2>
+            <ul class="list">
+                <li>Cadastral Survey</li>
+                <li>Topographic Survey</li>
+                <li>Land Demarcation</li>
+                <li>Engineering Survey</li>
+                <li>Setting Out</li>
+                <li>Land Documentation</li>
+                <li>Sales of land</li>
+                <li>Building Construction</li>
+            </ul>     
+        </div>
+
+        <div class="col s12 l4 xl4 middle">
+            <h2 class="sale-of-blocks">Sale of Blocks</h2>
+            <ul class="block-list flow-text">
+                We have 5 inches and 6 inches solid and hollow blocks. Here is how we can make an order:
+                <li>1. Register and Login</li>
+                <li>2. Enter the type of block in the form provided: for example: 6 inches solid</li>
+                <li>3. Enter the number of blocks: for example: 2000 blocks</li>
+                <li>4. Enter the location to be delivered: for example: Tutu Akuapem</li>
+                <li>5. Make your payments either through Bank or MoMo accounts</li>
+                <li>6. Wait patiently for your order</li>
+            </ul>
+            <div>
+                <% if current_user %>
+                    <% if current_user.role === 'admin' || current_user.role === 'dept_head' %>
+                        <%= link_to 'Add Blocks Supply Data', new_blocks_supply_path, class: 'light-blue lighten-2' %>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+
+        <div class="col s12 l4 xl4 right-side">
+            <h2 class="tipper">Tipper Truck Services</h2>
+            <p> For all your sand, stones, and gravels.
+                Kindly contact the manager on 0504699947, then provide all required details for 
+                a successful delivery and service
+            </p>
+        <div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Mksurveyconstruction" %></title>
+    <%= render 'layouts/default'%>
+    <%= render 'layouts/materialize'%>
+    <%= yield :head %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header'%>
+    <main class="container">
+      <%= render 'layouts/flash_msg'%>
+      <%= yield %>
+    </main>
+    <%= render 'layouts/footer'%>
+  </body>
+</html>
