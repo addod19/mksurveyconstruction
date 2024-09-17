@@ -5,14 +5,14 @@ class BlocksSupplyController < ApplicationController
   end
 
   def create
-    @blocks_supply = blocks_supply.build(blocks_supply_params)
+    @block_supply = blocks_supply.build(blocks_supply_params)
     # only admin can enter blocks supply data
-    @blocks_supply.save
+    @block_supply.save
     redirect_to blocks_supply_path
   end
 
   def new
-    @blocks_supply = BlockSupply.new
+    @block_supply = BlockSupply.new
   end
 
   def destroy
