@@ -5,10 +5,15 @@ class BlocksSupplyController < ApplicationController
   end
 
   def create
+    # current_user
     @block_supply = BlockSupply.build(blocks_supply_params)
     # only admin can enter blocks supply data
     @block_supply.save
-    redirect_to blocks_supply_index_path
+    if @block_supply
+      redirect_to blocks_supply_index_path
+    else
+      print "Error creating supply data"
+    end
   end
 
   def new

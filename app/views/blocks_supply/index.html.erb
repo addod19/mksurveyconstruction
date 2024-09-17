@@ -13,15 +13,16 @@
         </thead>
         <tbody>
             <% @admin_blocks_supply.each do |block_supply| %>
-            <tr>
-                <td><%= block_supply.name %></td>
-                <td><%= block_supply.type_of_blocks %></td>
-                <td><%= block_supply.number_of_blocks %></td>
-                <td><%= block_supply.contact %></td>
-                <td><%= block_supply.payment %></td>
-                <td><%= block_supply.balance %></td>
-            </tr>
+                <tr>
+                    <td><%= block_supply.name %></td>
+                    <td><%= block_supply.type_of_blocks %></td>
+                    <td><%= block_supply.number_of_blocks %></td>
+                    <td><%= block_supply.contact %></td>
+                    <td><%= block_supply.payment %></td>
+                    <td><%= block_supply.balance %></td>
+                </tr>
             <% end %>
         <tbody>
     </table>
 </section>
+
