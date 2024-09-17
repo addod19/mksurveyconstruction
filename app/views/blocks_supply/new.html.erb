@@ -1,6 +1,6 @@
 <section class='blocks-supply-data-entry'>
     <h2>Only Department Heads or Administrator can have access to this resource</h2>
-    <%= form_with do |f| %>
+    <%= form_with(model: @block_supply, url: '/blocks_supply') do |f| %>
         <div class="field">
             <%= f.label :name %><br />
             <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'supply-name-input' %>

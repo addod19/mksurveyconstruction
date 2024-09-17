@@ -1,0 +1,32 @@
+<section class='blocks-supply-data-entry'>
+    <h2>Only Department Heads or Administrator can have access to this resource</h2>
+    <%= form_with do |f| %>
+        <div class="field">
+            <%= f.label :name %><br />
+            <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'supply-name-input' %>
+        </div>
+        <div class="field">
+            <%= f.label :type %><br />
+            <%= f.text_field :type, autofocus: true, autocomplete: "type", class: 'supply-type-input' %>
+        </div>
+        <div class="field">
+            <%= f.label :number_of_blocks %><br />
+            <%= f.text_field :number_of_blocks, autofocus: true, autocomplete: "number_of_blocks", class: 'supply-number-of-blocks-input' %>
+        </div>
+        <div class="field">
+            <%= f.label :contact %><br />
+            <%= f.text_field :contact, autofocus: true, autocomplete: "contact", class: 'supply-contact-input' %>
+        </div>
+        <div class="field">
+            <%= f.label :payment %><br />
+            <%= f.text_field :payment, autofocus: true, autocomplete: "payment", class: 'supply-payment-input' %>
+        </div>
+        <div class="field">
+            <%= f.label :balance %><br />
+            <%= f.text_field :balance, autofocus: true, autocomplete: "balance", class: 'supply-balance-input' %>
+        </div>
+        <div class="actions">
+            <%= f.submit "Add Supply Data", class: 'blocks-supply-data-entry-btn' %>
+        </div>
+    <% end %>
+</section>

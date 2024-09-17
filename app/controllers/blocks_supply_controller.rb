@@ -1,14 +1,14 @@
 class BlocksSupplyController < ApplicationController
   skip_authorization_check
   def index
-    @admin_blocks_supply = BlockSupply.where(admin_id: ids).order(id: :desc)
+    @admin_blocks_supply = BlockSupply.all
   end
 
   def create
-    @block_supply = blocks_supply.build(blocks_supply_params)
+    @block_supply = BlockSupply.build(blocks_supply_params)
     # only admin can enter blocks supply data
     @block_supply.save
-    redirect_to blocks_supply_path
+    redirect_to blocks_supply_index_path
   end
 
   def new
@@ -24,6 +24,6 @@ class BlocksSupplyController < ApplicationController
   private
 
   def blocks_supply_params
-    params.require(:blocks_supply).permit(:name, :type_of_blocks, :number_of_blocks, :contact, :payment, :balance )
+    params.require(:block_supply).permit(:name, :type_of_blocks, :number_of_blocks, :contact, :payment, :balance )
   end
 end

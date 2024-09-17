@@ -13,16 +13,14 @@
         <tr>
     </thead>
     <tbody>
-    <% @users.each do |user| %>
-        <tr>
-            
+        <% @users.each do |user| %>
+            <tr>
                 <td><%= user.name %></td>
                 <td><%= user.email %></td>
                 <td><%= user.phone_number %></td>
                 <td><%= user.created_at %></td>
                 <td><%= user.updated_at %></td>
-            
-        </tr>
+            </tr>
         <% end %>
     </tbody>
 </table>
