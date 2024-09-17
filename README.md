@@ -1,24 +1,11 @@
-# README
+# MK Surveying and Construction Company
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is attempting to solve various issues and making the organisation structure transparent and easy to communicate and track
 
-Things you may want to cover:
+## What I have implemented so far
+- Devise authentication
+- Admin access and roles assignment
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Features yet to be implemented
+- Blocks supply features to keep track of blocks manufactured and supplied
+- More to be added as we keep going on
