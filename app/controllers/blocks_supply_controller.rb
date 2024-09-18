@@ -8,11 +8,12 @@ class BlocksSupplyController < ApplicationController
     # current_user
     @block_supply = BlockSupply.build(blocks_supply_params)
     # only admin can enter blocks supply data
-    @block_supply.save
-    if @block_supply
+    if @block_supply.save
+      flash[:success] = "Your post has been created!"
       redirect_to blocks_supply_index_path
     else
-      print "Error creating supply data"
+      flash[:alert] = "Your new block supply data couldn't be created!  Please check the form."
+      render 'new'
     end
   end
 
