@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @loader %>
+
+<div>
+  <%= link_to "Edit this loader", edit_loader_path(@loader) %> |
+  <%= link_to "Back to loaders", loaders_path %>
+
+  <%= button_to "Destroy this loader", @loader, method: :delete %>
+</div>

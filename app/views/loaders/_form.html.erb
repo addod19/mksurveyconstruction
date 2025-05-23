@@ -1,0 +1,42 @@
+<%= form_with(model: loader) do |form| %>
+  <% if loader.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(loader.errors.count, "error") %> prohibited this loader from being saved:</h2>
+
+      <ul>
+        <% loader.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :job_date, style: "display: block" %>
+    <%= form.date_field :job_date %>
+  </div>
+
+  <div>
+    <%= form.label :name_of_client, style: "display: block" %>
+    <%= form.text_field :name_of_client %>
+  </div>
+
+  <div>
+    <%= form.label :amount_charged, style: "display: block" %>
+    <%= form.text_field :amount_charged %>
+  </div>
+
+  <div>
+    <%= form.label :fuel, style: "display: block" %>
+    <%= form.text_field :fuel %>
+  </div>
+
+  <div>
+    <%= form.label :balance, style: "display: block" %>
+    <%= form.text_field :balance %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

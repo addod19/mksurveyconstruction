@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :loaders
   devise_for :users
 
   resources :users, only: :index
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  root to: "home#index"
+  root to: "loaders#index"
   delete 'users/sign_out'
   # get "blocks_supply#index"
 end

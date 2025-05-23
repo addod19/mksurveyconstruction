@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_date: 2025-05-22
+  name_of_client: MyString
+  amount_charged: 9.99
+  fuel: 9.99
+  balance: 9.99
+
+two:
+  job_date: 2025-05-22
+  name_of_client: MyString
+  amount_charged: 9.99
+  fuel: 9.99
+  balance: 9.99

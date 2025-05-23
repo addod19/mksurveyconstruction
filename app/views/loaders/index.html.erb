@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Loaders" %>
+
+<h1>Loaders</h1>
+
+<%= link_to "New loader", new_loader_path %>
+
+<div id="loaders">
+  <table>
+    <tr>
+      <th>Job date:</th>
+      <th>Name of client:</th>
+      <th>Amount charged:</th>
+      <th>Fuel:</th>
+      <th>Balance:</th>
+    </tr>
+    <tr>
+      <% @loaders.each do |loader| %>
+        <%= render loader %>
+      <% end %>
+    </tr>
+  </table>
+</div>
+
+
