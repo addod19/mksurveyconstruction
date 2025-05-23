@@ -6,6 +6,12 @@
 
 <%= link_to "New loader", new_loader_path %>
 
+<%= form_with url: loaders_path, method: :get, local: true do |form| %>
+  <%= form.label :job_date, "Search by Job Date:" %>
+  <%= form.date_field :job_date, value: params[:job_date] %>
+  <%= form.submit "Search" %>
+<% end %>
+
 <div id="loaders">
   <table>
     <tr>

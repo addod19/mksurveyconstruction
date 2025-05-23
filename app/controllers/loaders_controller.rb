@@ -4,7 +4,11 @@ class LoadersController < ApplicationController
 
   # GET /loaders or /loaders.json
   def index
-    @loaders = Loader.all
+    if params[:job_date].present?
+      @loaders = Loader.where(job_date: params[:job_date])
+    else
+      @loaders = Loader.all
+    end
   end
 
   # GET /loaders/1 or /loaders/1.json
