@@ -1,0 +1,11 @@
+<% content_for :title, "New machine rental" %>
+
+<h1>New machine rental</h1>
+
+<%= render "form", machine_rental: @machine_rental %>
+
+<br>
+
+<div>
+  <%= link_to "Back to machine rentals", machine_rentals_path %>
+</div>

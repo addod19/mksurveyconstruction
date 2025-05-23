@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  serial_num: MyString
+  color_of_machine: MyString
+  name_of_rentee: MyString
+  number_of_points: 1
+  amount_paid: 9.99
+
+two:
+  serial_num: MyString
+  color_of_machine: MyString
+  name_of_rentee: MyString
+  number_of_points: 1
+  amount_paid: 9.99

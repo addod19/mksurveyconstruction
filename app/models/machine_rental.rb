@@ -1,0 +1,2 @@
+class MachineRental < ApplicationRecord
+end

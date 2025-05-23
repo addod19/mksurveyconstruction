@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Machine rentals" %>
+
+<h1>Machine rentals</h1>
+
+<h5>Search Machine Rentals by Name of Rentee</h5>
+
+<%= form_with url: machine_rentals_path, method: :get, local: true do |form| %>
+  <%= form.label :name_of_rentee, "Name of Rentee:" %>
+  <%= form.text_field :name_of_rentee, value: params[:name_of_rentee] %>
+  <%= form.submit "Search" %>
+<% end %>
+
+<div id="machine_rentals">
+  <table>
+    <tr>
+      <th>Serial Number:</th>
+      <th>Color of Machine:</th>
+      <th>Name of Rentee:</th>
+      <th>Number of Points:</th>
+      <th>Amount Paid:</th>
+    </tr>
+    <tr>
+      <% @machine_rentals.each do |machine_rental| %>
+        <%= render machine_rental %>
+      <% end %>
+    </tr>
+  </table>
+</div>
+
+<%= link_to "New machine rental", new_machine_rental_path %>
