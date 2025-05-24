@@ -5,10 +5,20 @@
         <ul class="left hide-on-med-and-down">
           <% if current_user %>
             <p>Hello <%= current_user.role %>!</p>
-            <%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'Signout-btn' %>
+            <%= link_to 'Sign Out', destroy_user_session_path,
+              data: { turbo_method: :delete }, class: 'Signout-btn'
+            %>
           <% else %>
-            <li><%= link_to 'Log in', user_session_path, class: 'light-blue lighten-2' %>Login</li>
-            <li><%= link_to 'Sign up', new_user_registration_path, class: 'yellow lighten-2' %>Register</a></li>
+            <li>
+              <%= link_to 'Log in', user_session_path,
+                class: 'light-blue lighten-2'
+              %>
+            </li>
+            <li>
+              <%= link_to 'Sign up', new_user_registration_path,
+                class: 'yellow lighten-2'
+              %>
+            </li>
           <% end %>
         </ul>
       </div>

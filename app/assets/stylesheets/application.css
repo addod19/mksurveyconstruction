@@ -20,17 +20,15 @@
   margin: 0;
   padding: 0;
  }
+
 .container {
   width: 100vw;
-  /* height: 100vh; */
 }
-/* Header */
+
 .header {
   text-align: center;
   font-size: 3.5em;
 }
-
-
 
 .container-content {
   text-align: center;
@@ -64,7 +62,7 @@
   list-style: none;
   font-size: large;
 }
-/* Registration styling */
+
 .signup-container {
   width: 30%;
   height: auto;
@@ -72,7 +70,6 @@
   margin-left: 35%;
   margin-top: 5%;
 }
-
 
 .email-input,
 .name-input,
@@ -97,7 +94,6 @@
   width: 100%;
   height: 3em;
   background-color: turquoise;
-  color: white;
   border: none;
   border-radius: 1em;
 }
@@ -116,10 +112,12 @@
 }
 
 .Signout-btn {
-  border: 1px solid black;
+  color: black;
+  position: relative;
+  left: 45em;
+  top: -4.3em;
 }
 
-/* Footer */
 .page-footer {
   height: 6em;
 }

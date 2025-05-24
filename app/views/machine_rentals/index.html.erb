@@ -4,6 +4,9 @@
 
 <h1>Machine rentals</h1>
 
+
+<%= link_to "New machine rental", new_machine_rental_path %>
+
 <h5>Search Machine Rentals by Name of Rentee</h5>
 
 <%= form_with url: machine_rentals_path, method: :get, local: true do |form| %>
@@ -15,6 +18,7 @@
 <div id="machine_rentals">
   <table>
     <tr>
+      <th>Rental Date:</th>
       <th>Serial Number:</th>
       <th>Color of Machine:</th>
       <th>Name of Rentee:</th>
@@ -28,5 +32,3 @@
     </tr>
   </table>
 </div>
-
-<%= link_to "New machine rental", new_machine_rental_path %>

@@ -1,5 +1,6 @@
 <div id="<%= dom_id machine_rental %>">
   <tr>
+    <td><%= machine_rental.created_at.to_date %></td>
     <td><%= machine_rental.serial_num %></td>
     <td><%= machine_rental.color_of_machine %></td>
     <td><%= machine_rental.name_of_rentee %></td>
