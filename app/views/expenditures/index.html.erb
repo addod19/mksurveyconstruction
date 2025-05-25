@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Expenditures" %>
+
+<h1>Expenditures</h1>
+
+<div id="expenditures">
+  <table>
+    <tr>
+      <th>Title:</th>
+      <th>Amount:</th>
+      <th>Category:</th>
+      <th>Date Spent On:</th>
+      <th>Notes: </th>
+    </tr>
+    <% @expenditures.each do |expenditure| %>
+      <%= render expenditure %>
+      <p>
+        <%= link_to "Show this expenditure", expenditure %>
+      </p>
+    <% end %>
+  </table>
+</div>
+
+<%= link_to "New expenditure", new_expenditure_path %>

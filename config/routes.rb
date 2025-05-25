@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :expenditures
   resources :machine_rentals
   resources :loaders
   devise_for :users
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  root to: "loaders#index"
+  root to: "home#index"
   delete 'users/sign_out'
   # get "blocks_supply#index"
 end

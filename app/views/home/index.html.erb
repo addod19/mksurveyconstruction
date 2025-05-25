@@ -1,5 +1,7 @@
 <div>
-    <h1 class="header">Welcome to MK Surveying and Construction</h1>
+    <div>
+        <%= render "hero_section" %>
+    </div>
     <div class="row container-content">
         <div class="col s12 l4 xl4 left-side">
             <h2 class="office">We Undertake:</h2>
@@ -28,8 +30,20 @@
             </ul>
             <div>
                 <% if current_user %>
-                    <% if current_user.role === 'admin' || current_user.role === 'dept_head' %>
-                        <%= link_to 'Add Blocks Supply Data', new_blocks_supply_path, class: 'light-blue lighten-2' %>
+                    <% if current_user.role === 'admin' || current_user.admin? %>
+                        <%= link_to 'Add Blocks Supply Data', new_blocks_supply_path,
+                            class: 'light-blue lighten-2'
+                        %>
+                        <%= link_to 'Add Machine Rentals', new_machine_rental_path,
+                            class: 'light-blue lighten-2'
+                        %>
+                        <%= link_to 'Add Loader Info', new_loader_path,
+                            class: 'light-blue lighten-2'
+                        %>
+                        <%= link_to 'Add Expenditures', new_expenditure_path,
+                            class: 'light-blue lighten-2'
+                        %>
+                        
                     <% end %>
                 <% end %>
             </div>
